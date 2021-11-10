@@ -12,17 +12,15 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
 title                    : "Woody의 개발 일지"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Woody"
-description              : "세상에 영향을 줄 수 있는 애플리케이션을 개발하고 싶은 개발자입니다. Java로 안드로이드 애플리케이션을 개발하며 BLE 통신으로 아두이노와
-안드로이드를 함께 사용하는 프로젝트들에 관심을 가지고 있습니다. 사용자의 입장에서 사용하기 편리하고 이해하기 쉬운 애플리케이션이 되도록
-개발하는 것을 중요시합니다."
+name                     : "Woody(최연준)"
+description              : #""
 url                      : "https://github.com/jun6726"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -104,18 +102,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "Woody"
+  name             : "세상에 영향을 줄 수 있는 애플리케이션을 개발하고 싶은 개발자입니다. "
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "새로운 마음으로 개발자 준비생입니다."
+  bio              : "Java로 안드로이드 애플리케이션을 개발하며 BLE 통신으로 아두이노와 안드로이드를 함께 사용하는 프로젝트들에 관심을 가지고 있습니다. 사용자의 입장에서 사용하기 편리하고 이해하기 쉬운 애플리케이션이 되도록 개발하는 것을 중요시합니다."
   location         : "Republic of Korea"
-  email            : "junmarko@naver.com"
+  email            : #"junmarko@naver.com"
   links:
-    - label: "youtube"
+    - label: "Woody의 Youtube 채널"
       icon: "fab fa-fw fa-youtube"
       url: "https://www.youtube.com/channel/UCr8LUPohovlgV--n1iy1kTQ"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+    - label: ""junmarko@naver.com""
+      icon: "fas fa-fw fa-naver"
+      url: "junmarko@naver.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
