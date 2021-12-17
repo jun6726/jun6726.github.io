@@ -160,7 +160,7 @@ public class Sample {
 		}
 	```
 >주석에서도 간단히 설명했듯이 varTest2의 출력 자료형을 void에서 int로 변경해주며, 입력값 o, 출력값 o의 메소드로 변경되었다.
->[메소드의 형태]()중에서 [입력 값 o, 리턴 값 o (basic)]()에서 사용방법에 표현한 것처럼 변수(리턴값)에 varTest2의 출력값을 저장해야한다.
+>[메소드의 형태](https://jun6726.github.io/2021-12-17-method#%EB%A9%94%EC%86%8C%EB%93%9C%EC%9D%98-%ED%98%95%ED%83%9C)중에서 [입력 값 o, 리턴 값 o (basic)](https://jun6726.github.io/2021-12-17-method#%EC%9E%85%EB%A0%A5-%EA%B0%92-o-%EB%A6%AC%ED%84%B4-%EA%B0%92-o-basic)에서 사용방법에 표현한 것처럼 변수(리턴값)에 varTest2의 출력값을 저장해야한다.
 >main에서 7열에서 선언된 a를 9열에서 varTest 메소드로 a값을 증가시켜서 저장했기 때문에 결과가 2가 나온다.
 
 
