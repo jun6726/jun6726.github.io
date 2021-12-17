@@ -57,36 +57,36 @@ public class Sample {
 
 ##### 입력 값 o, 리턴 값 o (basic)
 - 사용방법 : 변수(리턴값) = 객체.메소드명(인수1, 인수2, ...)<br/>
-	```java
-		Public int sum(int a, int b){
-			return a+b;
-		}
-	```
+```java
+	Public int sum(int a, int b){
+		return a+b;
+	}
+```
 >```java Sample sample = new Sample();```<br/>
 >```int c = sample.sum(a, b);```<br/>
 > 리턴값의 변수가 메소드 리턴값과 같기 위해 int로 c를 선언한다.<br/>
 
 ##### 입력 값 x, 리턴 값 o
 - 사용방법 : 변수(리턴값) = 객체.메소드명()<br/>
-	```java
-		Public String say(){
+```java
+	Public String say(){
 		return "Hi";
-		}
-	```
+	}
+```
 > 메소드 내부에 있는 자원만으로 모든 기능을 완료하기 때문에 호출만으로 변수에 대입이 된다.<br/>
 > 위에서 설명한 믹서기로 억지스러운 예로 들자면<br/>
 > 과일 쥬스 대신에 공기 쥬스를 만들기 위해 믹서기만 돌린다고 표현하고 싶다.
 	
 ##### 입력 값 O, 리턴 값 X
 - 사용방법 : 객체.메소드명(인수1, 인수2, ...)<br/>	
-	```java
-		Public void sum(int a, int b){ 
-			System.out.println(a+"과"+b+"의 합은 "+(a+b)+"입니다.");
-		}
+```java
+	Public void sum(int a, int b){ 
+		System.out.println(a+"과"+b+"의 합은 "+(a+b)+"입니다.");
+	}
 		
-		//결과
-		3과 4의 합은 7입니다.
-	```
+	//결과
+	3과 4의 합은 7입니다.
+```
 > **메소드 선언부에서 평소와 다른 void에 집중해보자**<br/>void는 *빈 공간, 공허 등의 뜻*으로 리턴값이 빈, **공허로 생각하여 리턴값이 없다고 생각하면 된다.**<br/>
 > 위의 코드에서는 ```System.out.println()``` 함수를 사용하기 때문에 화면에 출력되는 값이 있지만,<br/> 메소드 내에서 실행되는 것이지 결과값으로 출력하는 것이 아니다.
 
@@ -94,23 +94,23 @@ public class Sample {
 
 #### 입력 값 x, 리턴 값 x
 - 사용방법 : 객체.메소드명()
-	```java
-		public void say() {
-			System.out.println("Hi");
-		}
-	```
+```java
+	public void say() {
+		System.out.println("Hi");
+	}
+```
 > 다른 형태들에서 설명한 내용들이랑 비교해보면 메소드에서 받는 인자도 없고,<br/>출력 자료형이 void로 리턴값도 없다.
 
 ### return의 다른 용도
 특정 경우 메소드에서 나가기(?)위해 return을 단독으로 사용한다면 즉시 메소드를 종료한다.
 (출력 자료형이 void일 때)
 ```java
-	public void sayNick(String nick) {
-		if ("fool".equals(nick)) {
-			return;
-		}
-		System.out.println("나의 별명은 "+nick+" 입니다.");
+public void sayNick(String nick) {
+	if ("fool".equals(nick)) {
+		return;
 	}
+	System.out.println("나의 별명은 "+nick+" 입니다.");
+}
 ```
 	
 >fool이라는 입력값을 받았을때는 별명을 출력하기 전에 메소드를 종료한다.
@@ -125,18 +125,17 @@ public class Sample {
 
 지역변수와 전역변수의 이름을 동일하게 설정하고 간단한 연산을 통해 확인해보자
 ```java
-	class Sample {
-		public void varTest1(int a) {
-			a++;
-		}
-
-		public static void main(String[] args) {
-			int a = 1;
-			Sample sample1 = new Sample();
-			sample1.varTest1(a);
-			System.out.println(a); //결과 : 1
-		}
+class Sample {
+	public void varTest1(int a) {
+		a++;
 	}
+	public static void main(String[] args) {
+		int a = 1;
+		Sample sample1 = new Sample();
+		sample1.varTest1(a);
+		System.out.println(a); //결과 : 1
+	}
+}
 ```
 위의 varTest1는 출력자료형이 void이고, 인자가 int a로 선언됐으니 입력값 o, 출력값 x의 메소드이다.
 `sample1.varTest1(a)`가 실행되는 동안에는 a++까지 적용되지만 메소드 안에서만 연산이 이루어지고 메소드 밖의 변수 a에는 영향을 주지 않았다.
@@ -144,21 +143,20 @@ public class Sample {
 *위에서 지역변수의 변화는 전역변수에 <mark>직접적으로</mark> 영향을 주지 않는다.* 라고 표현한 이유는 영향을 주는 방법도 있기 때문이다.
 
 1. 메소드의 리턴(출력) 값을 전역변수에 저장시킨다.
-	```java
-		public int varTest2(int a) { // void > int 
-			a++;
-			return a; // 출력값 O
-		}
-
+```java
+	public int varTest2(int a) { // void > int 
+		a++;
+		return a; // 출력값 O
+	}
 		public static void main(String[] args) {
-			int a = 1;
-			Sample sample = new Sample();
-			a = sample.varTest2(a); // a에 출력값을 대입
-			System.out.println(a); 
-			// 결과
-			// 2
-		}
-	```
+		int a = 1;
+		Sample sample = new Sample();
+		a = sample.varTest2(a); // a에 출력값을 대입
+		System.out.println(a); 
+		// 결과
+		// 2
+	}
+```
 >주석에서도 간단히 설명했듯이 varTest2의 출력 자료형을 void에서 int로 변경해주며, 입력값 o, 출력값 o의 메소드로 변경되었다.
 >[메소드의 형태](https://jun6726.github.io/2021-12-17-method#%EB%A9%94%EC%86%8C%EB%93%9C%EC%9D%98-%ED%98%95%ED%83%9C)중에서 [입력 값 o, 리턴 값 o (basic)](https://jun6726.github.io/2021-12-17-method#%EC%9E%85%EB%A0%A5-%EA%B0%92-o-%EB%A6%AC%ED%84%B4-%EA%B0%92-o-basic)에서 사용방법에 표현한 것처럼 변수(리턴값)에 varTest2의 출력값을 저장해야한다.
 >main에서 7열에서 선언된 a를 9열에서 varTest 메소드로 a값을 증가시켜서 저장했기 때문에 결과가 2가 나온다.
@@ -167,21 +165,21 @@ public class Sample {
 2. 메소드의 매개변수가 객체일때
 	+ 메소드의 입력값을 객체로 하고 메소드 내에서 객체의 속성값(객체변수 값)을 변경한다면 메소드에서 처리된 연산이 메소드 외부에도 영향을 끼칠 수 있다.
 ```java
-	public class Sample {
+public class Sample {
 
-		int a;  // 객체변수 a
+	int a;  // 객체변수 a
 		
-		public void varTest3(Sample sample){ 
-			sample.a++;	//this.a++;
-			}
-		
-		public static void main(String[] args) {		
-			Sample sample3 = new Sample();
-			sample3.a = 1;	
-			sample3.varTest3(sample3);
-			System.out.println(sample3.a);	//결과 : 2
+	public void varTest3(Sample sample){ 
+		sample.a++;	//this.a++;
 		}
+		
+	public static void main(String[] args) {		
+		Sample sample3 = new Sample();
+		sample3.a = 1;	
+		sample3.varTest3(sample3);
+		System.out.println(sample3.a);	//결과 : 2
 	}
+}
 ```
 	> sample3의 객체변수로 a를 선언하고, varTest3에서 입력값을 객체(sample)로 받기로 했다.
 	> varTest3는 입력받은 sample의 객체 중 속성(객체 변수)의 a를 증가했다.
