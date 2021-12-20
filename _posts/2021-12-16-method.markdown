@@ -164,6 +164,7 @@ class Sample {
 
 2. 메소드의 매개변수가 객체일때
 	+ 메소드의 입력값을 객체로 하고 메소드 내에서 객체의 속성값(객체변수 값)을 변경한다면 메소드에서 처리된 연산이 메소드 외부에도 영향을 끼칠 수 있다.
+
 ```java
 public class Sample {
 
@@ -181,12 +182,14 @@ public class Sample {
 	}
 }
 ```
-	> sample3의 객체변수로 a를 선언하고, varTest3에서 입력값을 객체(sample)로 받기로 했다.
-	> varTest3는 입력받은 sample의 객체 중 속성(객체 변수)의 a를 증가했다.
 
-	> sample 객체를 이용하여 varTest라는 메소드를 호출할 경우 굳이 sample 객체를 전달할 필요가 없다. 왜냐하면 전달하지 않더라도 varTest 메소드는 this라는 키워드를 이용하여 객체에 접근할 수 있기 때문이다.
+
+> sample3의 객체변수로 a를 선언하고, varTest3에서 입력값을 객체(sample)로 받기로 했다.
+> varTest3는 입력받은 sample의 객체 중 속성(객체 변수)의 a를 증가했다.
+
+> sample 객체를 이용하여 varTest라는 메소드를 호출할 경우 굳이 sample 객체를 전달할 필요가 없다. 왜냐하면 전달하지 않더라도 varTest 메소드는 this라는 키워드를 이용하여 객체에 접근할 수 있기 때문이다.
 	
-	> sample 클래스에서 sample 객체를 만든 것이고, 객체 자체에 호출할 메소드가 포함되있기 때문에 this로 호출 가능(?)
+> sample 클래스에서 sample 객체를 만든 것이고, 객체 자체에 호출할 메소드가 포함되있기 때문에 this로 호출 가능(?)
 
 
 출처 : <https://wikidocs.net/225>
