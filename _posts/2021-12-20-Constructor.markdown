@@ -1,8 +1,9 @@
 ---
 title: "JAVA 객체지향 4"
 permalink: /2021-12-20-Constructor
-excerpt: "객체지향 프로그래밍을 위한 생성자"
-last_modified_at: 2021-12-20T10:50:18-11:28
+excerpt: "객체지향 프로그래밍을 위한 [생성자]"
+date: "2021-12-20 10:50:00 +0900"
+last_modified_at: 2021-12-20T10:50:18
 toc: true
 ---
 내가 이해하기 위한 JAVA 객체지향 4
@@ -10,9 +11,11 @@ toc: true
 
 생성자는 객체가 생성될때 필수로 입력받아야하는 데이터를 정의하는 메소드
 
-`public HouseDog(String name) {`
-`	this.setName(name);`
-`}`
+```java
+public HouseDog(String name) {
+	this.setName(name);
+}
+```
 
 **리턴 자료형을 정의하지 않고, 클래스 명과 동일한 이름을 가지는 메소드.**
 
@@ -76,7 +79,7 @@ public class HouseDog extends Dog {
 	}
 	
 	public void sleep(int hour) {
-		System.out.println(this.name + " zzz in house for " + hour + " hours");
+		System.out.println(this.name + "zzz in house for" +hour+"hours");
 	}
 	
 	public static void main(String[] args) {

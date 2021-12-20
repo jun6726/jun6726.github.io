@@ -2,8 +2,12 @@
 title: "JAVA 객체지향 3"
 permalink: /2021-12-20-Inheritance
 excerpt: "객체지향 프로그래밍을 위한 [상속]"
-last_modified_at: 2021-12-20T09:40:18-10:50
+date: "2021-12-20 09:40:00 +0900"
+last_modified_at: 2021-12-20T09:40:18
 toc: true
+
+categories: ["java", "oop"]
+tags: ["java1", "oop1"]
 ---
 내가 이해하기 위한 JAVA 객체지향 3
 # 상속

@@ -1,7 +1,7 @@
 ---
 title: "JAVA 객체지향 1"
-permalink: /2021-12-16-class1
-excerpt: "객체지향 프로그래밍을 위한 클래스"
+permalink: /2021-12-16-class
+excerpt: "객체지향 프로그래밍을 위한 [클래스]"
 last_modified_at: 2021-12-16T13:56:18-14:00
 toc: true
 ---
