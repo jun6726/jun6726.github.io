@@ -2,7 +2,7 @@
 title: "JAVA 객체지향 2"
 permalink: /2021-12-17-method
 excerpt: "객체지향 프로그래밍을 위한 메소드"
-last_modified_at: 2021-12-17T13:56:18-14:00
+last_modified_at: 2021-12-20T09:33:18-09:51
 toc: true
 ---
 내가 이해하기 위한 JAVA 객체지향 2
@@ -191,5 +191,71 @@ public class Sample {
 	
 > sample 클래스에서 sample 객체를 만든 것이고, 객체 자체에 호출할 메소드가 포함되있기 때문에 this로 호출 가능(?)
 
+---
+title: "JAVA 객체지향 3"
+permalink: /2021-12-20-call_by_value
+excerpt: "객체지향 프로그래밍을 위한 call by value"
+last_modified_at: 2021-12-20T09:40:18-14:00
+toc: true
+---
+내가 이해하기 위한 JAVA 객체지향 3
+#Call by value
+메소드에 값을 전달하는 것과 객체를 전달하는 것에는 큰 차이가 있다.
+**객체를 전달할 경우 메소드에서 객체의 객체변수를 변경할 수 있게 된다.**
+
+```java
+class Updater {
+    public void update(int count) {
+        count++;
+    }
+}
+
+public class Counter {
+    int count = 0;  // 객체변수
+    public static void main(String[] args) {        
+        Counter myCounter = new Counter();        
+        System.out.println("before update:"+myCounter.count);
+        Updater myUpdater = new Updater();
+        myUpdater.update(myCounter.count);
+        System.out.println("after update:"+myCounter.count);
+		
+		//결과
+		//before update:0
+		//after update:0
+    }
+}
+```
+
+> Updater 메소드의 매개변수가 int(자료)형으로 myCounter의 객체변수 count가 변화가 없다.
+
+Updater 메소드의 매개변수를 객체형으로 입력했을 때 변화를 아래의 코드에서 확인해보겠다.
+
+```java
+class Updater {
+    public void update(Counter counter) {
+        counter.count++;
+    }
+}
+
+public class Counter {
+    int count = 0;
+    public static void main(String[] args) {
+        Counter myCounter = new Counter();
+        System.out.println("before update:"+myCounter.count);
+        Updater myUpdater = new Updater();
+        myUpdater.update(myCounter);
+        System.out.println("after update:"+myCounter.count);
+		
+		//결과
+		//before update:0
+		//after update:1
+    }
+}
+```
+
+update(int count) 에서 update(Counter counter)로 변경하고
+메소드 호출부분에서도 myUpdater.update(myCounter.count) 에서 myUpdater.update(myCounter)로 변경되며
+
+자료형을 입력에서 객체 입력으로 변경하였다.
 
 출처 : <https://wikidocs.net/225>
