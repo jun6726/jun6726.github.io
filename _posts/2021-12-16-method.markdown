@@ -4,6 +4,7 @@ permalink: /2021-12-17-method
 excerpt: "객체지향 프로그래밍을 위한 [메소드]"
 last_modified_at: 2021-12-20T09:33:18
 toc: true
+toc_sticky: true
 categories:
   - OPP
   - JAVA
@@ -261,4 +262,5 @@ update(int count) 에서 update(Counter counter)로 변경하고
 
 자료형을 입력에서 객체 입력으로 변경하였다.
 
-출처 : <https://wikidocs.net/225>
+출처<br/>
+[https://wikidocs.net/225](https://wikidocs.net/225)

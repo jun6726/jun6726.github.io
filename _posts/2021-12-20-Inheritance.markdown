@@ -5,6 +5,7 @@ excerpt: "객체지향 프로그래밍을 위한 [상속]"
 date: "2021-12-20 09:40:00 +0900"
 last_modified_at: 2021-12-20T09:40:18
 toc: true
+toc_sticky: true
 categories:
   - OPP
   - JAVA
@@ -155,5 +156,5 @@ public class HouseDog extends Dog {
 클래스가 동시에 하나 이상의 클래스를 상속받는 것을 뜻한다.
 하지만 자바는 다중 상속이 지원되지 않고, 파이썬이나 c++에서 다중 상속이 지원되며, 우선순위를 적용하여 해결한다.
 
-출처 : https://wikidocs.net/280
-
+출처<br/>
+[https://wikidocs.net/280](https://wikidocs.net/280)

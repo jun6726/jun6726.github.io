@@ -5,6 +5,7 @@ excerpt: "객체지향 프로그래밍을 위한 [인터페이스]"
 date: "2021-12-20 11:32:00 +0900"
 last_modified_at: 2021-12-21T15:32:18-16:50
 toc: true
+toc_sticky: true
 categories:
   - OPP
   - JAVA

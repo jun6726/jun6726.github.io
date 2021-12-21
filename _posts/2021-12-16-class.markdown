@@ -4,6 +4,7 @@ permalink: /2021-12-16-class
 excerpt: "객체지향 프로그래밍을 위한 [클래스]"
 last_modified_at: 2021-12-16T13:56:18-14:00
 toc: true
+toc_sticky: true
 categories:
   - OPP
   - JAVA
@@ -134,4 +135,5 @@ public class Animal{
 
 **'클래스에서 객체 변수의 값이 독립적'**이라는 것이 <br/>클래스의 존재 이유이며,**'객체 지향적이다'**라는 이유이다.
 
-출처 : <https://wikidocs.net/214>
+출처<br/>
+[https://wikidocs.net/214](https://wikidocs.net/214)
