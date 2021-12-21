@@ -5,9 +5,9 @@ excerpt: "객체지향 프로그래밍을 위한 [상속]"
 date: "2021-12-20 09:40:00 +0900"
 last_modified_at: 2021-12-20T09:40:18
 toc: true
-
-categories: ["java", "oop"]
-tags: ["java1", "oop1"]
+categories:
+  - OPP
+  - JAVA
 ---
 내가 이해하기 위한 JAVA 객체지향 3
 # 상속
@@ -123,9 +123,9 @@ public class HouseDog extends Dog {
 ```
 
 ### 메소드 오버로딩 (Method overloading)
-**메소드 오버로딩**은 오버라이딩과 다르게 다른 형태의 메소드(동일한 이름의 메소드에 입력값이 다를 경우)를 <mark>**추가**</mark>하는 것이다.
+**메소드 오버로딩**은 오버라이딩과 다르게 다른 형태의 메소드(동일한 이름의 메소드에 입력값이 다를 경우)를 **추가**하는 것이다.
 
-```java 
+```java
 public class HouseDog extends Dog {
 	public void sleep() {
 		System.out.println(this.name+ " zzz in house");
@@ -154,3 +154,6 @@ public class HouseDog extends Dog {
 
 클래스가 동시에 하나 이상의 클래스를 상속받는 것을 뜻한다.
 하지만 자바는 다중 상속이 지원되지 않고, 파이썬이나 c++에서 다중 상속이 지원되며, 우선순위를 적용하여 해결한다.
+
+출처 : https://wikidocs.net/280
+

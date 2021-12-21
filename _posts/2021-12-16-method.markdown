@@ -7,7 +7,6 @@ toc: true
 categories:
   - OPP
   - JAVA
-  - Method
 ---
 내가 이해하기 위한 JAVA 객체지향 2
 # 메소드
