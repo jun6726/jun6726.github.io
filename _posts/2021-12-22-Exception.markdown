@@ -233,14 +233,14 @@ public class Sample {
 
 > 그렇다면 어디서 예외 처리를 하는 것이 더 좋은 것일까
 
-1. [sayNick 메소드에서 예외처리](http://localhost:4000/2021-12-22-Exception#saynick-%EB%A9%94%EC%86%8C%EB%93%9C%EC%97%90%EC%84%9C-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC)를 한다면 fool과 genious 두 문장 모두 수행한다.
+1. [sayNick 메소드에서 예외처리](https://jun6726.github.io/2021-12-22-Exception#saynick-%EB%A9%94%EC%86%8C%EB%93%9C%EC%97%90%EC%84%9C-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC) 를 한다면 fool과 genious 두 문장 모두 수행한다.
 
-2. [main 메소드에서 예외처리](http://localhost:4000/2021-12-22-Exception#main-%EB%A9%94%EC%86%8C%EB%93%9C%EC%97%90%EC%84%9C-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC) 를 한다면 fool에서 FoolException이 발생하고 catch 문으로 genious도 수행하지 못한다.
+2. [main 메소드에서 예외처리](https://jun6726.github.io/2021-12-22-Exception#main-%EB%A9%94%EC%86%8C%EB%93%9C%EC%97%90%EC%84%9C-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC) 를 한다면 fool에서 FoolException이 발생하고 catch 문으로 genious도 수행하지 못한다.
 
 **Exception 처리 위치는 프로그램 수행 여부와 트랜잭션 처리와 관계있기 때문에 매우 중요하다.**
 
 
-# 트랜잭션 (Transaction)
+### 트랜잭션 (Transaction)
 
 트랜잭션은 하나의 작업 단위로 "상품발송"으로 예를 들면 상품발송에는 (포장 > 영수증발행 > 발송)으로 이루어지고 3가지의 일 중 하나라도 실패하면 "상품발송"을 취소한다.
 > 모두 취소하지 않으면 정상적인 작업이 아니기 때문에 롤백(Rollback) 한다고 말한다.
