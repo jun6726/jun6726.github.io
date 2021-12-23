@@ -1,0 +1,125 @@
+---
+title: "JAVA 객체지향 8"
+permalink: /2021-12-23-JAVA_EX1
+excerpt: "객체지향 프로그래밍을 위한 [예저 풀이]"
+date: "2021-12-23 11:00:00 +0900"
+last_modified_at: 2021-12-23T11:00:18
+toc: true
+toc_sticky: true
+categories:
+  - OPP
+  - JAVA
+---
+
+10 미만의 자연수에서 3과 5의 배수를 구하면 3, 5, 6, 9이다. 이들의 총합은 23이다.
+1000 미만의 자연수에서 3의 배수와 5의 배수의 총합을 구하라.
+
+
+ex1
+```java
+public class sum1 {	
+	public static void main(String[] args){
+	int sum = 0;
+	
+		for(int i = 0; i<10; i++){
+			if(i%3 == 0) {
+				sum += i;
+			} else if(i%5 == 0) {
+				sum += i;
+			}
+		}
+		
+		System.out.println(sum);
+	}
+	
+	// 결과 : 23
+}
+```
+
+ex2
+```java
+public class sum2 {	
+	public static void main(String[] args){
+	int sum = 0;
+	
+		for(int i = 0; i<1000; i++){
+			if(i%3 == 0 || i%5 ==0) {
+				sum += i;
+			}
+		}
+		System.out.println(sum);
+	}
+	
+	// 결과 : 233168 
+}
+```
+
+게시판 페이징하기
+
+메소드 이름은? getTotalPage
+입력 받는 값은? 게시물의 총 건수(m), 한 페이지에 보여줄 게시물 수(n)
+출력하는 값은? 총 페이지수
+
+```java
+public class Paging {
+	static int getTotalPage(int m, int n){
+		return m / n + 1;
+	}
+	
+	public static void main(String[] args){ 
+	for(int j=0; j<20; j++){
+		System.out.println("j : " + j);
+		System.out.println("result : " + getTotalPage(j,10));
+		}
+	}
+}
+```
+
+자릿수 구하기
+
+양의 정수를 입력 받아 그 자릿수를 출력하는 프로그램
+
+```java
+
+public class CountingDigit {
+	static int Counter(int number){
+		int count = 0;
+		while (number!=0){
+			number = number / 10;
+			count++;			
+		}
+		return count;
+	}	
+	
+	public static void main(String[] args){
+		System.out.println("number : 1 " + Counter(1));
+		System.out.println("number : 12 " + Counter(12));
+		System.out.println("number : 10 " + Counter(10));
+		System.out.println("number : 12421 " + Counter(12421));	
+		System.out.println("number : 3452421 " + Counter(3452421));
+	}
+}
+```
+
+공백을 제외한 글자수 세기
+
+
+```java
+public class CountChar {
+	static int countchar(String str){
+		int result = 0;
+		for (int i=0; i<str.length(); i++){
+			if(str.charAt(i) != ' '){
+				result++;
+			}
+		}
+		return result;
+	}
+		
+	public static void main(String[] args){
+	String str = "공백 제외 글자수";
+	System.out.println("카운팅 str ~ " + countchar("공백 제외 글자수"));
+	System.out.println("카운팅 str ~ " + countchar("안녕하세요 Woody의 블로그입니다. _ ."));
+	}
+}
+```
