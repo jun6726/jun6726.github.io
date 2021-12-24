@@ -7,7 +7,7 @@ last_modified_at: 2021-12-24T16:05:18
 toc: true
 toc_sticky: true
 categories:
-  - Coding Test
+  - BAEKJOON
 ---
 
 ### 10950번

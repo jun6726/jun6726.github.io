@@ -7,7 +7,7 @@ last_modified_at: 2021-12-22T13:50:18
 toc: true
 toc_sticky: true	
 categories:
-  - OPP
+  - OOP
   - JAVA
 ---
 내가 이해하기 위한 JAVA 객체지향 7

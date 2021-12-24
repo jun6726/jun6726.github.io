@@ -7,7 +7,7 @@ last_modified_at: 2021-12-23T11:00:18
 toc: true
 toc_sticky: true
 categories:
-  - OPP
+  - OOP
   - JAVA
 ---
 
