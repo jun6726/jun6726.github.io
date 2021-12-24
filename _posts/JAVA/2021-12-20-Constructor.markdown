@@ -1,6 +1,6 @@
 ---
 title: "JAVA 객체지향 4"
-permalink: /2021-12-20-Constructor
+permalink: /JAVA/2021-12-20-Constructor
 excerpt: "객체지향 프로그래밍을 위한 [생성자]"
 date: "2021-12-20 10:50:00 +0900"
 last_modified_at: 2021-12-20T10:50:18

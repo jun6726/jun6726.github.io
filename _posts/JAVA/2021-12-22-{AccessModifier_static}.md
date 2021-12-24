@@ -1,6 +1,6 @@
 ---
 title: "JAVA 객체지향 6"
-permalink: /2021-12-22-AccessModifier_static
+permalink: /JAVA/2021-12-22-{AccessModifier_static}
 excerpt: "객체지향 프로그래밍을 위한 [접근제어자와 정적변수]"
 date: "2021-12-22 10:30:00 +0900"
 last_modified_at: 2022-12-22T13:27:18-16:50
@@ -106,7 +106,7 @@ public class Counter  {
 > static 메소드 getCount()로 객체 생성없이 Counter.getCount를 실행했다.
 > static 메소드 안에서는 객체변수에 접근하지 못한다. 위의 예제에서는 count도 static 변수이기 때문에 접근이 가능하다.
 
-# 싱글톤 패턴 (Singleton pattern)
+### 싱글톤 패턴 (Singleton pattern)
 클래스로 생성하는 객체가 단 하나(single)인 디자인 패턴이다.
 
 *Sample.java*
