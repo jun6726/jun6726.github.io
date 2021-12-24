@@ -1,6 +1,6 @@
 ---
 title: "JAVA 객체지향 7"
-permalink: /JAVA/2021-12-22-Exception
+permalink: /Exception/
 excerpt: "객체지향 프로그래밍을 위한 [예외]"
 date: "2021-12-22 13:25:00 +0900"
 last_modified_at: 2021-12-22T13:50:18
