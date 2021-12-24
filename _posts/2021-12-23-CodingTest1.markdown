@@ -52,9 +52,7 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args){
-	    System.out.println("1에서 4000까지의 년도를 입력해주세요.");
-	    System.out.println("윤년은 1을 윤년이 아니면 0을 출력합니다.");
+	public static void main(String[] args){	  
 		Scanner sc = new Scanner(System.in);
 		int year = sc.nextInt();
 
@@ -64,9 +62,83 @@ public class Main {
     		}else{
     		    System.out.println("0");
     		}
-        }else {
-            System.out.println("정상적인 연 수가 아닙니다.");
         }
 	}
 }
 ```
+### 14681번 
+문제<br/>
+흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. "Quadrant n"은 "제n사분면"이라는 뜻이다.<br/>
+점의 좌표를 입력받아 그 점이 어느 사분면에 속하는지 알아내는 프로그램을 작성하시오. 단, x좌표와 y좌표는 모두 양수나 음수라고 가정한다.<br/>
+
+입력<br/>
+첫 줄에는 정수 x가 주어진다. (−1000 ≤ x ≤ 1000; x ≠ 0) 다음 줄에는 정수 y가 주어진다. (−1000 ≤ y ≤ 1000; y ≠ 0)<br/>
+
+출력<br/>
+점 (x, y)의 사분면 번호(1, 2, 3, 4 중 하나)를 출력한다.<br/>
+
+```java
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        
+        if(x != 0 && y != 0 && x <= 1000 && x >= -1000 && y <= 1000 && y >= -1000){
+            if(x > 0 && y > 0){
+                System.out.println("1");
+            }else if(x > 0 && y < 0){
+                System.out.println("4");
+            }else if(x < 0 && y > 0){
+                System.out.println('2');
+            }else if(x < 0 && y < 0){
+                System.out.println('3');
+            }
+        }
+	}
+}
+```
+
+### 2884번
+문제<br/>
+"45분 일찍 알람 설정하기"이다.<br/>
+
+입력<br/>
+첫째 줄에 두 정수 H와 M이 주어진다. (0 ≤ H ≤ 23, 0 ≤ M ≤ 59) 그리고 이것은 현재 상근이가 설정한 놓은 알람 시간 H시 M분을 의미한다.<br/>
+
+입력 시간은 24시간 표현을 사용한다. 24시간 표현에서 하루의 시작은 0:0(자정)이고, 끝은 23:59(다음날 자정 1분 전)이다. 시간을 나타낼 때, 불필요한 0은 사용하지 않는다.<br/>
+
+출력<br/>
+첫째 줄에 상근이가 창영이의 방법을 사용할 때, 설정해야 하는 알람 시간을 출력한다. (입력과 같은 형태로 출력하면 된다.)
+
+```java
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args){
+	    Scanner sc = new Scanner(System.in);
+	    int H = sc.nextInt();
+	    int M = sc.nextInt();
+	    
+	    if(H >= 0 && H <= 23 && M >= 0 && M <= 59){
+	        if(M >= 45){
+	            M -= 45;
+	        }else if(H == 0){
+	            H = 23;
+	            M += 15;
+	        }else{
+	            H -= 1;
+	            M += 15;
+	        }
+	    }
+	    System.out.println(H + " " + M);
+	}
+}
+```
+> 45분이상일 때는 시는 그대로 나두고 분만 뺴면 되지만, 45분 미만일때는 시간에서도 빼줘야 한다.
+> 그리고 00시일땐 23시로 가야하기 때문에 H를 23으로 설정했다.
+
+> 만약 if문의 순서가 바뀌어서 H == 0 조건부터 설정했다면, 0시 45분 ~ 0시 59분에서는 23시 60분 ~ 23시 74분으로 나왔을것이다.
+
