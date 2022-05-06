@@ -1,5 +1,5 @@
 ---
-title: "JAVA 배열"
+title: "12JAVA 배열"
 permalink: /test/
 <!-- excerpt: "객체지향 프로그래밍을 위한 [쓰레드]" -->
 date: "2022-05-06 09:40:00 +0900"

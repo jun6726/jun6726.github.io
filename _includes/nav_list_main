@@ -38,6 +38,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+	<span class="nav__sub_title">iOS</span>
+	<ul>
+		{% for category in site.categories %}
+			{%  if category[0] == "Objective-c" %}
+				<li><a href="/categories/Objective-c" class="">🎫 Objective-c ({{category[1].size}})</a></li> 
+			{% endif %}
+	</ul>		
       </li>
   </ul>
 </nav>
