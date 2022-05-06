@@ -1,0 +1,30 @@
+---
+title: "Operator:\?"
+permalink: /Operator:\?/
+last_modified_at: 2022-05-06 T10:56:18-14:00
+toc: true
+toc_sticky: true
+categories:
+  - Objective-c
+---
+내가 이해하기 위한 Objective-c
+# (?) 연산자
+
+일반적인 조건문을 대체하는 연산자 \? 는 다른 언어에서도 사용가능하며
+Objective-c 로 보면 
+```a? b : c;
+이라는 의미는 a라는 조건이 'true'면 b, 'false'면 c라는 의미이다
+
+아래 실제로 작동하는 코드로 확인해보면
+```objective-c
+	int a = 5;
+	NSString *b = @"b";
+	NSString *c = @"c";
+	NSString *result;
+
+	result = a > 10 ? b : c;
+```
+마지막의 줄에서 result는 a가 10보다 크다가 true면 b, false면 c가 되는 것이다.
+a가 5로 10보다 작기 때문에 c가 되서 resul에 "c"가 대입된다
+
+
