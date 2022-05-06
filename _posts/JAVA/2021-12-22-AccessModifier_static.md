@@ -1,7 +1,6 @@
 ---
-title: "JAVA 객체지향 6"
+title: "객체지향 프로그래밍을 위한 [접근제어자와 정적변수]"
 permalink: /AccessModifier_static/
-excerpt: "객체지향 프로그래밍을 위한 [접근제어자와 정적변수]"
 date: "2021-12-22 10:30:00 +0900"
 last_modified_at: 2022-12-22T13:27:18-16:50
 toc: true
